@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const cityWeatherContainer = document.querySelector('.city-weather');
     const cities = ["New York", "London", "Tokyo", "Jakarta", "Stuttgart","Istanbul","Strasbourg","Budapest"];
-    const apiKey = '0ae161083cfaca498302819e0ea3957e';
+    const apiKey = 'API_Key_OpenWeather_Anda_Disini';
 
     cities.forEach(city => {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`)
@@ -195,4 +195,5 @@ const indonesiaCities = [
   locationButton.addEventListener("click", getUserCoordinates);
   searchButton.addEventListener("click", getCityCoordinates);
   cityInput.addEventListener("keyup", e => e.key === "Enter" && getCityCoordinates());
+
   
